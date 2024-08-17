@@ -24,11 +24,11 @@ function PhoneNumberInput({maxLength = 10}) {
 
             formatedValue.push(numbers[i]);
 
-            if(size>6 && i==5){
+            if(size>6 && i===5){
                 formatedValue.push("-");
             }
 
-            if(size>3 && i==2){
+            if(size>3 && i===2){
                 formatedValue.push(")")
             }
         }
