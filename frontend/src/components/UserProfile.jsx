@@ -1,25 +1,29 @@
 import React from 'react'
+import UserFavouriteFoods from './UserFavouriteFoods'
+import UserUsernname from './UserUsernname'
+import PropTypes from 'prop-types';
+const UserProfile = (props) => {
+  console.log(props)
 
-const UserProfile = () => {
+  props.work()
+  
   return (
-    <div>
-        <p>Username: Bob</p>
-        <div>
-            <span>Email: </span>
-            <span>shubham70254@gmail.com</span>
-        </div>
-        <section>
-            <span>Favourite Foods:</span>
-            <br/>
-            <ul>
-                <li>Sushi</li>
-                <li>Pizza</li>
-                <li>Sushi</li>
-                <li>Sushi</li>
-            </ul>
-        </section>
+    <div id='user-profile'>
+        <UserUsernname username="Shubham" trimmedUsername="Shubh"/>
+        <b>Age: </b>
+        <span>{props.age}</span>
+        <UserFavouriteFoods/>
+        
+
     </div>
   )
+}
+UserProfile.propTypes ={
+  username: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  work: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.bool
+
 }
 
 export default UserProfile

@@ -7,13 +7,20 @@ import FifthQuestion from './questions/fifth-question'
 import SixthQuestion from './questions/sixth-question'
 import SeventhQuestion from './questions/seventh-question'
 import UserProfile from './components/UserProfile'
+import UserFavouriteFoods from './components/UserFavouriteFoods'
 
 const App = () => {
+
+  const work = () => {
+    console.log("Work")
+  }
   return (
     <div>
-      <UserProfile/>
+      <UserProfile age={20} isLoggedIn={true} work={work}/>
 
-      {/* <FirstQuestion/>
+      {/* 
+         <UserFavouriteFoods/>
+      <FirstQuestion/>
       <SecondQuestion/>
       <ThirdQuestion/>
       <FourthQuestion/>
