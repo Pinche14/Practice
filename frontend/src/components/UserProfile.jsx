@@ -22,7 +22,8 @@ UserProfile.propTypes ={
   username: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
   work: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.bool
+  isLoggedIn: PropTypes.bool,
+  favouriteFoods: PropTypes
 
 }
 

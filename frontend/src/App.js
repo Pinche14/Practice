@@ -12,23 +12,40 @@ import EighthQuestion from './questions/eighth-question'
 
 const App = () => {
 
-  // const work = () => {
-  //   console.log("Work")
-  // }
+  const work = () => {
+    console.log("Work")
+  }
   return (
     <div>
-      {/* <UserProfile age={20} isLoggedIn={true} work={work}/>
+      <UserProfile 
+      age={20} 
+      isLoggedIn={true} 
+      work={work}
+      favouriteFoods = {[
+        {
+          name: "Sushi",
+          id: "sushi"
+        },
+        {
+          name: "Aloo Tikki",
+          id:"Aloo Tikki"
+
+        }
+      ]}
 
       
-      <UserFavouriteFoods/> */}
-      <FirstQuestion/>
+      />
+
+      
+      <UserFavouriteFoods/>
+      {/* <FirstQuestion/>
       <SecondQuestion/>
       <ThirdQuestion/>
       <FourthQuestion/>
       <FifthQuestion/>
       <SixthQuestion/>
       <SeventhQuestion/>
-      <EighthQuestion/>
+      <EighthQuestion/> */}
     </div>
   )
 }
