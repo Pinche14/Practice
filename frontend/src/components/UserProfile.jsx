@@ -23,7 +23,12 @@ UserProfile.propTypes ={
   age: PropTypes.number.isRequired,
   work: PropTypes.func.isRequired,
   isLoggedIn: PropTypes.bool,
-  favouriteFoods: PropTypes
+  favouriteFoods: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  )
 
 }
 
