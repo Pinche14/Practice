@@ -1,13 +1,14 @@
 import React, {createElement} from 'react'
 
-const UserFavouriteFoods = () => {
+const UserFavouriteFoods = (props) => {
+  console.log(props.fooditem)
   return (
     <div>
         <section>
-            <span>Favourite Foods:</span>
+            <b>Favourite Foods:</b>
             <br/>
             <ul>
-                <li>Sushi</li>
+                <li>{props.name}</li>
                 <li>Pizza</li>
                 <li>Sushi</li>
                 <li>Sushi</li>

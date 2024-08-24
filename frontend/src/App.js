@@ -32,12 +32,7 @@ const App = () => {
 
         }
       ]}
-
-      
       />
-
-      
-      <UserFavouriteFoods/>
       {/* <FirstQuestion/>
       <SecondQuestion/>
       <ThirdQuestion/>

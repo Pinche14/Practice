@@ -9,6 +9,11 @@ const UserUsernname = (props) => {
         <span>
            { props.username}
         </span>
+        <br/>
+        <b>Age: </b>
+        <span>
+          {props.age}
+        </span>
     </div>
   )
 }
