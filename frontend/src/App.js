@@ -9,15 +9,36 @@ import SeventhQuestion from './questions/seventh-question'
 import UserProfile from './components/UserProfile'
 import UserFavouriteFoods from './components/UserFavouriteFoods'
 import EighthQuestion from './questions/eighth-question'
+import "./globals.css";
+import "./components/UserDetails"
+
 
 const App = () => {
 
-  const work = () => {
-    console.log("Work")
-  }
+  const mockUsers = [
+    {
+      id: 1,
+      username: 'Shubham',
+      email: 'shubham70254@gmail.com'
+    },
+    {
+      id: 2,
+      username: "Vikas",
+      email: 'vikas123@gmail.com'
+    },
+    
+  ]
+
+  // const work = () => {
+  //   console.log("Work")
+  // }
   return (
     <div>
-      <UserProfile 
+      {mockUsers.map((user) => {
+        return <UserDetails key={user.id} user= {user}/>
+      })}
+      {/* <UserProfile 
+      username='Shubham'
       age={20} 
       isLoggedIn={true} 
       work={work}
@@ -32,7 +53,7 @@ const App = () => {
 
         }
       ]}
-      />
+      /> */}
       {/* <FirstQuestion/>
       <SecondQuestion/>
       <ThirdQuestion/>

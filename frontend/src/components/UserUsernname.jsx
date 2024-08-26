@@ -4,17 +4,17 @@ const UserUsernname = (props) => {
     console.log(props.username)
   return (
   
-    <div>
+    <React.Fragment>
         <b>Username: </b>
         <span>
            { props.username}
         </span>
         <br/>
-        <b>Age: </b>
+        {/* <b>Age: </b>
         <span>
           {props.age}
-        </span>
-    </div>
+        </span> */}
+    </React.Fragment>
   )
 }
 

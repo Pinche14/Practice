@@ -9,13 +9,13 @@ const UserProfile = (props) => {
   
   return (
     <div id='user-profile'>
-        <UserUsernname username="Shubham" trimmedUsername="Shubh" age="23"/>
-        {/* <b>Age: </b>
-        <span>{props.age}</span> */}
+        <UserUsernname username = {props.username}/>
+        <b>Age: </b>
+        <span>{props.age}</span>
         <UserFavouriteFoods/>
     </div>
   )
-}
+} 
 UserProfile.propTypes ={
   username: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,

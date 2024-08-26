@@ -8,7 +8,7 @@ const UserFavouriteFoods = (props) => {
             <b>Favourite Foods:</b>
             <br/>
             <ul>
-                <li>{props.name}</li>
+                {/* <li>{props.name}</li> */}
                 <li>Pizza</li>
                 <li>Sushi</li>
                 <li>Sushi</li>
