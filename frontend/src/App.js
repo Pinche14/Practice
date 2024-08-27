@@ -11,32 +11,64 @@ import UserFavouriteFoods from './components/UserFavouriteFoods'
 import EighthQuestion from './questions/eighth-question'
 import "./globals.css";
 import "./components/UserDetails"
+import UserDetails from './components/UserDetails'
 
 
 const App = () => {
 
-  const mockUsers = [
-    {
-      id: 1,
-      username: 'Shubham',
-      email: 'shubham70254@gmail.com'
-    },
-    {
-      id: 2,
-      username: "Vikas",
-      email: 'vikas123@gmail.com'
-    },
+  const isAuthenticated = false
+
+  const USER_STATUS = 'NOT_VERIFIED';
+
+  if(USER_STATUS === 'NOT_VERIFIED'){
+    return (
+      <div>
+        <span>
+          You are not verified. Please verify Email.
+        </span>
+      </div>
+    )
+  }
+  else if (USER_STATUS === 'VERFIED') {
     
-  ]
+  }
+
+  if(isAuthenticated){
+    return (
+      <div>
+      <h1>Hy There!</h1>
+    </div>
+    );
+  } else {
+    return (
+    <div>
+      <span>You are not logged in</span>
+    </div>
+    )
+  }
+
+  // const mockUsers = [
+  //   {
+  //     id: 1,
+  //     username: 'Shubham',
+  //     email: 'shubham70254@gmail.com'
+  //   },
+  //   {
+  //     id: 2,
+  //     username: "Vikas",
+  //     email: 'vikas123@gmail.com'
+  //   },
+    
+  // ]
 
   // const work = () => {
   //   console.log("Work")
   // }
   return (
     <div>
-      {mockUsers.map((user) => {
-        return <UserDetails key={user.id} user= {user}/>
-      })}
+      {/* {mockUsers.map((user) => {
+        return <UserDetails user={user} />
+      })} */}
       {/* <UserProfile 
       username='Shubham'
       age={20} 
