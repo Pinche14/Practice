@@ -12,40 +12,59 @@ import EighthQuestion from './questions/eighth-question'
 import "./globals.css";
 import "./components/UserDetails"
 import UserDetails from './components/UserDetails'
+import LoginForm from './components/LoginForm'
 
 
 const App = () => {
 
-  const isAuthenticated = false
+  //const isAuthenticated = true
 
-  const USER_STATUS = 'NOT_VERIFIED';
+  // const USER_STATUS = 'ZERO';
 
-  if(USER_STATUS === 'NOT_VERIFIED'){
-    return (
-      <div>
-        <span>
-          You are not verified. Please verify Email.
-        </span>
-      </div>
-    )
-  }
-  else if (USER_STATUS === 'VERFIED') {
-    
-  }
+  // if(USER_STATUS === 'NOT_VERIFIED'){
+  //   return (
+  //     <div>
+  //       <span>
+  //         You are not verified. Please verify Email.
+  //       </span>
+  //     </div>
+  //   )
+  // }
+  // else if (USER_STATUS === 'VERIFIED') {
+  //   return(
+  //     <div>
+  //       You are verified.
+  //     </div>
+  //   )
+  // } else if  (USER_STATUS === 'DISABLED') {
+  //   return(
+  //     <div>
+  //       <span>Your account has been disabled.</span>
+  //     </div>
+  //   )
 
-  if(isAuthenticated){
-    return (
-      <div>
-      <h1>Hy There!</h1>
-    </div>
-    );
-  } else {
-    return (
-    <div>
-      <span>You are not logged in</span>
-    </div>
-    )
-  }
+  // }
+  // else  {
+  //   return(
+  //     <div>
+  //       <span>Contact admin.</span>
+  //     </div>
+  //   )
+  // }
+
+  // if(isAuthenticated){
+  //   return (
+  //     <div>
+  //     <h1>Hy There!</h1>
+  //   </div>
+  //   );
+  // } else {
+  //   return (
+  //   <div>
+  //     <span>You are not logged in</span>
+  //   </div>
+  //   )
+  // }
 
   // const mockUsers = [
   //   {
@@ -66,6 +85,7 @@ const App = () => {
   // }
   return (
     <div>
+      <LoginForm/>
       {/* {mockUsers.map((user) => {
         return <UserDetails user={user} />
       })} */}
