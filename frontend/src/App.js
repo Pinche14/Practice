@@ -83,6 +83,10 @@ const App = () => {
   // const work = () => {
   //   console.log("Work")
   // }
+
+  window.addEventListener('resize', (e) => {
+    console.log(window.innerHeight,window.innerWidth)
+  });
   return (
     <div>
       <LoginForm/>

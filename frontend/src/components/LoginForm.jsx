@@ -4,6 +4,17 @@ const LoginForm = () => {
   return (
     <from onSubmit={(e) => {
         e.preventDefault()
+        const formData =  new FormData(e.target);
+        const username = formData.get("username")
+        const password = formData.get("passwword")
+        // fetch("http://localhost:3001/api/login", {
+        //     body: {
+        //         username,
+        //         password,
+        //     },
+        //     method: "POST"
+        // })
+        //console.log(formData.get('username'));
     }}>
         <label htmlFor="username">Username</label>
         <br/>
