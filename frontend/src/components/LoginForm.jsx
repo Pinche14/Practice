@@ -2,19 +2,20 @@ import React from 'react'
 
 const LoginForm = () => {
   return (
-    <from onSubmit={(e) => {
+    <from 
+        onSubmit={(e) => {
         e.preventDefault()
         const formData =  new FormData(e.target);
         const username = formData.get("username")
-        const password = formData.get("passwword")
-        // fetch("http://localhost:3001/api/login", {
-        //     body: {
-        //         username,
-        //         password,
-        //     },
-        //     method: "POST"
-        // })
-        //console.log(formData.get('username'));
+        const password = formData.get("password")
+        fetch("http://localhost:3001/api/login", {
+            body: {
+                username,
+                password,
+            },
+            method: "POST"
+        })
+       // console.log(formData.get('username'));
     }}>
         <label htmlFor="username">Username</label>
         <br/>
@@ -33,7 +34,7 @@ const LoginForm = () => {
             onChange={(e)=>{
             console.log(`Password: ${e.target.value}`);
             }}
-            
+            name = "password"
         />
         <br />
         <button>Login</button>
