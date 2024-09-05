@@ -8,7 +8,7 @@ const LoginForm = () => {
         const formData =  new FormData(e.target);
         const username = formData.get("username")
         const password = formData.get("password")
-        fetch("http://localhost:3001/api/login", {
+        fetch("http://localhost:3001/api/logintime", {
             body: {
                 username,
                 password,
