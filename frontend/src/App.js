@@ -13,6 +13,7 @@ import "./globals.css";
 import "./components/UserDetails"
 import UserDetails from './components/UserDetails'
 import LoginForm from './components/LoginForm'
+import RegisterForm from './components/RegisterForm'
 
 
 const App = () => {
@@ -89,7 +90,7 @@ const App = () => {
   // });
   return (
     <div>
-      <LoginForm/>
+      <RegisterForm/>
       {/* {mockUsers.map((user) => {
         return <UserDetails user={user} />
       })} */}
