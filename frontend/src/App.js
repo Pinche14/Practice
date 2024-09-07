@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FirstQuestion } from './questions/first-question'
 import { SecondQuestion } from './questions/second-question'
 import { ThirdQuestion } from './questions/third-question'
@@ -17,6 +17,20 @@ import RegisterForm from './components/RegisterForm'
 
 
 const App = () => {
+
+  const [users, setUsers] = useState([
+    {
+      id: 1,
+      username: 'Shubham',
+      email: 'shubham@gmail.com'
+    },
+    {
+      id: 2,
+      username: 'Vijay',
+      email: 'vijay@gmail.com'
+    },
+
+  ])
 
   //const isAuthenticated = true
 
@@ -88,9 +102,14 @@ const App = () => {
   // window.addEventListener('resize', (e) => {
   //   console.log(window.innerHeight,window.innerWidth)
   // });
+ 
   return (
+   
     <div>
-      <RegisterForm/>
+      {users.map((user) => (
+        <UserDetails key={user.id} user={user}/>
+      ))}
+      {/* <RegisterForm/> */}
       {/* {mockUsers.map((user) => {
         return <UserDetails user={user} />
       })} */}
