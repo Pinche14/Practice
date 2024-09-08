@@ -2,7 +2,7 @@ import React ,{useState} from 'react'
 import PropTypes from 'prop-types';
 const UserDetails = ({user}) => {
   const [isEditing, setIsEditing] = useState(false)
-
+  const [username, setUsername] = useState(user.username)
   console.log(isEditing)
   return (
     <div>
@@ -16,7 +16,7 @@ const UserDetails = ({user}) => {
       </div>
       <div key={user.id}>
           <b>ID: </b>
-          {isEditing ? <input value={user.id}/> : <span>{user.id}</span>}
+          {isEditing ? (<input value={user.id}/>) :( <span>{user.id}</span>)}
           <br/>
           <b>Username: </b>
           {isEditing ? <input name='username' id="username"/> : <span>{user.username}</span>}
