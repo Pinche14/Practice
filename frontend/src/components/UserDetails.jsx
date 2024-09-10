@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 const UserDetails = ({user}) => {
   const [isEditing, setIsEditing] = useState(false)
   const [username, setUsername] = useState(user.username)
+  const [email, setEmail] = useState(user.email)
   console.log(isEditing)
   return (
     <div>
@@ -11,18 +12,19 @@ const UserDetails = ({user}) => {
         onClick={() => {
           setIsEditing((currentState) => !currentState)
         }}
-        >Edit</button>
+        >Edit
+        </button>
         <button>Delete</button>
+        <button>Save</button>
       </div>
       <div key={user.id}>
           <b>ID: </b>
-          {isEditing ? (<input value={user.id}/>) :( <span>{user.id}</span>)}
           <br/>
           <b>Username: </b>
           {isEditing ? <input name='username' id="username"/> : <span>{user.username}</span>}
           <br/>
           <b>Email: </b>
-          {isEditing ? <input value={user.email}/> : <span>{user.email}</span>}
+          {isEditing ? <input name='email' id="email"/> : <span>{user.email}</span>}
       </div>
     </div>
     
