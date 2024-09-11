@@ -107,7 +107,7 @@ const App = () => {
    
     <div>
       {users.map((user) => (
-        <UserDetails key={user.id} user={user}/>
+        <UserDetails key={user.id} user={user} setUsers={setUsers}/>
       ))}
       {/* <RegisterForm/> */}
       {/* {mockUsers.map((user) => {

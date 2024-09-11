@@ -1,6 +1,6 @@
 import React ,{useState} from 'react'
 import PropTypes from 'prop-types';
-const UserDetails = ({user}) => {
+const UserDetails = ({user , setUsers}) => {
   const [isEditing, setIsEditing] = useState(false)
   const [username, setUsername] = useState(user.username)
   const [email, setEmail] = useState(user.email)
@@ -15,16 +15,51 @@ const UserDetails = ({user}) => {
         >Edit
         </button>
         <button>Delete</button>
-        <button>Save</button>
+        {isEditing && (
+          <button onClick={() => {
+            setUsers((currentUsersState) => {
+              return currentUsersState.map((currentuser) => {
+                  if(currentuser.id === user.id)
+                    return {...currentuser, username: username, email};
+                  else return currentuser;
+                })
+            })
+            setIsEditing(false)
+          }}
+          >
+            Save
+          </button>
+        )}
+        
       </div>
       <div key={user.id}>
           <b>ID: </b>
           <br/>
           <b>Username: </b>
-          {isEditing ? <input name='username' id="username"/> : <span>{user.username}</span>}
+          {isEditing ? (
+            <input 
+                name='username' 
+                id="username" 
+                value={username} 
+                onChange={(e)=> {
+                  setUsername(e.target.value)
+                }}/>
+          ) : (
+            <span>{user.username}</span>
+          )}
           <br/>
           <b>Email: </b>
-          {isEditing ? <input name='email' id="email"/> : <span>{user.email}</span>}
+          {isEditing ? (
+            <input 
+                name='email' 
+                id="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                }}/>
+          ) : (
+            <span>{user.email}</span>
+          )}
       </div>
     </div>
     
@@ -37,7 +72,8 @@ UserDetails.propTypes = {
     id: PropTypes.number.isRequired,
     username: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired
-  })
+  }),
+  setUsers: PropTypes.func.isRequired
 }
 
 export default UserDetails
