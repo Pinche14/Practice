@@ -14,7 +14,14 @@ const UserDetails = ({user , setUsers}) => {
         }}
         >Edit
         </button>
-        <button>Delete</button>
+        <button onClick={() =>{
+          setUsers((currentUsersState) => currentUsersState.filter(
+            (currentuser) => currentuser.id !== user.id
+          ))
+        }}
+        >
+          Delete
+        </button>
         {isEditing && (
           <button onClick={() => {
             setUsers((currentUsersState) => {
@@ -33,7 +40,7 @@ const UserDetails = ({user , setUsers}) => {
         
       </div>
       <div key={user.id}>
-          <b>ID: </b>
+          <b>ID:{user.id} </b>
           <br/>
           <b>Username: </b>
           {isEditing ? (
