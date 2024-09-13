@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import { FirstQuestion } from './questions/first-question'
 import { SecondQuestion } from './questions/second-question'
 import { ThirdQuestion } from './questions/third-question'
@@ -18,22 +18,22 @@ import RegisterForm from './components/RegisterForm'
 
 const App = () => {
 
-  const [users, setUsers] = useState([
-    {
-      id: 1,
-      username: 'Shubham',
-      email: 'shubham@gmail.com'
-    },
-    {
-      id: 2,
-      username: 'Vijay',
-      email: 'vijay@gmail.com'
-    },
+  // const [users, setUsers] = useState([
+  //   {
+  //     id: 1,
+  //     username: 'Shubham',
+  //     email: 'shubham@gmail.com'
+  //   },
+  //   {
+  //     id: 2,
+  //     username: 'Vijay',
+  //     email: 'vijay@gmail.com'
+  //   },
 
-  ])
-  const [username, setUsername] = useState("")
-  const [email, setEmail] = useState("")
-  const [counter, setCounter] = useState(3)
+  // ])
+  // const [username, setUsername] = useState("")
+  // const [email, setEmail] = useState("")
+  // const [counter, setCounter] = useState(3)
 
   //const isAuthenticated = true
 
@@ -106,74 +106,87 @@ const App = () => {
   //   console.log(window.innerHeight,window.innerWidth)
   // });
  
+  const [counter, setCounter] = useState(0)
+  const [sync, setSync] = useState(false)
+
+  useEffect(() => {
+    console.log("Rendering")
+    document.title = "React Tut" + counter
+  },[sync])
+
   return (
-   
     <div>
-      <div>
-        <form onSubmit={(e) => {
-          e.preventDefault();
-          const newUser = {
-            id: counter,
-            username,
-            email
-          }
-          setCounter((currentCounter) => currentCounter+1)
-          setUsers((currentUsersState) => [...currentUsersState, newUser])
-        }}>
-          <div>
-            <label htmlFor='username'>Username</label>
-            <input name="username" id='username' value={username}
-              onChange={(e) => {setUsername(e.target.value)}}
-            >
-
-            </input>
-          </div>
-          <div>
-            <label htmlFor='email'>Email</label>
-            <input name="email" id='email' value={email}
-            onChange={(e) => {setEmail(e.target.value)}}
-          >
-
-          </input>
-          </div>
-          <button>Add User</button>
-        </form>
-        
-      </div>
-      <br/>
-      {users.map((user) => (
-        <UserDetails key={user.id} user={user} setUsers={setUsers}/>
-      ))}
-      {/* <RegisterForm/> */}
-      {/* {mockUsers.map((user) => {
-        return <UserDetails user={user} />
-      })} */}
-      {/* <UserProfile 
-      username='Shubham'
-      age={20} 
-      isLoggedIn={true} 
-      work={work}
-      favouriteFoods = {[
-        {
-          name: "Sushi",
-          id: "sushi"
-        },
-        {
-          name: "Aloo Tikki",
-          id:"Aloo Tikki"
-
-        }
-      ]}
-      /> */}
-      {/* <FirstQuestion/>
-      <SecondQuestion/>
-      <ThirdQuestion/>
-      <FourthQuestion/>
-      <FifthQuestion/>
-      <SixthQuestion/>
-      <SeventhQuestion/>
-      <EighthQuestion/> */}
+      <div>You clicked the button</div>
+      <button onClick={() => {setCounter((count)=> count+1)}}>Click Me</button>
+      <button onClick={() => setSync((current) => !current)}>Sync</button>
     </div>
+   
+    // <div>
+    //   <div>
+    //     <form onSubmit={(e) => {
+    //       e.preventDefault();
+    //       const newUser = {
+    //         id: counter,
+    //         username,
+    //         email
+    //       }
+    //       setCounter((currentCounter) => currentCounter+1)
+    //       setUsers((currentUsersState) => [...currentUsersState, newUser])
+    //     }}>
+    //       <div>
+    //         <label htmlFor='username'>Username</label>
+    //         <input name="username" id='username' value={username}
+    //           onChange={(e) => {setUsername(e.target.value)}}
+    //         >
+
+    //         </input>
+    //       </div>
+    //       <div>
+    //         <label htmlFor='email'>Email</label>
+    //         <input name="email" id='email' value={email}
+    //         onChange={(e) => {setEmail(e.target.value)}}
+    //       >
+
+    //       </input>
+    //       </div>
+    //       <button>Add User</button>
+    //     </form>
+        
+    //   </div>
+    //   <br/>
+    //   {users.map((user) => (
+    //     <UserDetails key={user.id} user={user} setUsers={setUsers}/>
+    //   ))}
+    //   {/* <RegisterForm/> */}
+    //   {/* {mockUsers.map((user) => {
+    //     return <UserDetails user={user} />
+    //   })} */}
+    //   {/* <UserProfile 
+    //   username='Shubham'
+    //   age={20} 
+    //   isLoggedIn={true} 
+    //   work={work}
+    //   favouriteFoods = {[
+    //     {
+    //       name: "Sushi",
+    //       id: "sushi"
+    //     },
+    //     {
+    //       name: "Aloo Tikki",
+    //       id:"Aloo Tikki"
+
+    //     }
+    //   ]}
+    //   /> */}
+    //   {/* <FirstQuestion/>
+    //   <SecondQuestion/>
+    //   <ThirdQuestion/>
+    //   <FourthQuestion/>
+    //   <FifthQuestion/>
+    //   <SixthQuestion/>
+    //   <SeventhQuestion/>
+    //   <EighthQuestion/> */}
+    // </div>
   )
 }
 
