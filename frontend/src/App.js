@@ -161,12 +161,21 @@ const App = () => {
           if (blogPostData.title && blogPostData.body){
             fetch('https://jsonplaceholder.typicode.com/posts',{
               method:'POST',
-              body: {
+              body: JSON.stringify({
                 userId: 1,
                 title: blogPostData.title,
                 body: blogPostData.body
-              }
+              }),
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+              },
             })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success!");
+              console.log(data)
+            })
+            .catch((err) => console.log(err))
           }
         }}
       >
