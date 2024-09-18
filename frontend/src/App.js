@@ -14,14 +14,12 @@ import "./components/UserDetails"
 import UserDetails from './components/UserDetails'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
+import Eventlistener from './components/Eventlistener'
 
 
 const App = () => {
 
-  const [blogPostData, setBlogPostData] = useState({
-    title:"",
-    body:""
-  })
+  
 
   // const [users, setUsers] = useState([
   //   {
@@ -40,54 +38,7 @@ const App = () => {
   // const [email, setEmail] = useState("")
   // const [counter, setCounter] = useState(3)
 
-  //const isAuthenticated = true
-
-  // const USER_STATUS = 'ZERO';
-
-  // if(USER_STATUS === 'NOT_VERIFIED'){
-  //   return (
-  //     <div>
-  //       <span>
-  //         You are not verified. Please verify Email.
-  //       </span>
-  //     </div>
-  //   )
-  // }
-  // else if (USER_STATUS === 'VERIFIED') {
-  //   return(
-  //     <div>
-  //       You are verified.
-  //     </div>
-  //   )
-  // } else if  (USER_STATUS === 'DISABLED') {
-  //   return(
-  //     <div>
-  //       <span>Your account has been disabled.</span>
-  //     </div>
-  //   )
-
-  // }
-  // else  {
-  //   return(
-  //     <div>
-  //       <span>Contact admin.</span>
-  //     </div>
-  //   )
-  // }
-
-  // if(isAuthenticated){
-  //   return (
-  //     <div>
-  //     <h1>Hy There!</h1>
-  //   </div>
-  //   );
-  // } else {
-  //   return (
-  //   <div>
-  //     <span>You are not logged in</span>
-  //   </div>
-  //   )
-  // }
+  
 
   // const mockUsers = [
   //   {
@@ -154,57 +105,7 @@ const App = () => {
   // })
   return (
 
-    <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (blogPostData.title && blogPostData.body){
-            fetch('https://jsonplaceholder.typicode.com/posts',{
-              method:'POST',
-              body: JSON.stringify({
-                userId: 1,
-                title: blogPostData.title,
-                body: blogPostData.body
-              }),
-              headers: {
-                "Content-type": "application/json; charset=UTF-8",
-              },
-            })
-            .then((response) => response.json())
-            .then((data) => {
-              console.log("Success!");
-              console.log(data)
-            })
-            .catch((err) => console.log(err))
-          }
-        }}
-      >
-      <div>  
-        <label htmlFor='title'>Title </label>
-        <input type="text" id="title" value={blogPostData.title} 
-          onChange={(e) => {
-            setBlogPostData((currentBlogPostData) => ({
-              ...currentBlogPostData,
-              title: e.target.value
-            }))
-          }}
-        />
-      </div>
-      <div>  
-        <label htmlFor='body'>Body </label>
-        <input type="text" id="body" value={blogPostData.body} 
-          onChange={(e) => {
-            setBlogPostData((currentBlogPostData) => ({
-              ...currentBlogPostData,
-              body: e.target.value
-            }))
-          }}
-        />
-      </div>
-      <button>Create Post</button>
-      </form>
-      
-    </div>
+   
     // <div>
     //   <div>You clicked the button</div>
     //   <button onClick={() => {setCounter((count)=> count+1)}}>Click Me</button>
@@ -277,6 +178,9 @@ const App = () => {
     //   <SeventhQuestion/>
     //   <EighthQuestion/> */}
     // </div>
+    <div>
+      <Eventlistener/>
+    </div>
   )
 }
 
