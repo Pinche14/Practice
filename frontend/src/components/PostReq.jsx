@@ -5,6 +5,7 @@ const PostReq = () => {
         title:"",
         body:""
       })
+      
   return (
      <div>
       <form

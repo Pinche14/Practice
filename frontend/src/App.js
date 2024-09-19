@@ -18,168 +18,19 @@ import Eventlistener from './components/Eventlistener'
 
 
 const App = () => {
-
   
-
-  // const [users, setUsers] = useState([
-  //   {
-  //     id: 1,
-  //     username: 'Shubham',
-  //     email: 'shubham@gmail.com'
-  //   },
-  //   {
-  //     id: 2,
-  //     username: 'Vijay',
-  //     email: 'vijay@gmail.com'
-  //   },
-
-  // ])
-  // const [username, setUsername] = useState("")
-  // const [email, setEmail] = useState("")
-  // const [counter, setCounter] = useState(3)
-
-  
-
-  // const mockUsers = [
-  //   {
-  //     id: 1,
-  //     username: 'Shubham',
-  //     email: 'shubham70254@gmail.com'
-  //   },
-  //   {
-  //     id: 2,
-  //     username: "Vikas",
-  //     email: 'vikas123@gmail.com'
-  //   },
-    
-  // ]
-
-  // const work = () => {
-  //   console.log("Work")
-  // }
-
-  // window.addEventListener('resize', (e) => {
-  //   console.log(window.innerHeight,window.innerWidth)
-  // });
- 
-  // const [counter, setCounter] = useState(0)
-  // const [sync, setSync] = useState(false)
-
-  // useEffect(() => {
-  //   console.log("Rendering")
-  //   document.title = "React Tut" + counter
-  // },[sync,counter])
-
-  // useEffect(() => {
-  //   fetch("https://jsonplaceholder.typicode.com/posts",{
-  //     method:'GET',
-  //   }).then((response) =>{
-  //     return response.json()
-  //   }).then((data) => {
-  //     console.log(data)
-  //   });
-  // })
-
-  // useEffect(() => {
-  //   const controller = new AbortController();
-    
-  //   async function fetchUsers() {
-  //     try{
-  //       const response = await fetch(
-  //         "https://jsonplaceholder.typicode.com/posts",
-  //         {signal: controller.signal}
-  //       );
-  //       const json = await response.json();
-  //       console.log(json)
-  //       console.log(controller.signal)
-
-  //     } catch(err) {
-  //       console.log(err)
-  //     }
-  //   }
-  //   fetchUsers();
-  //   return () => {
-  //      controller.abort();
-  //      console.log(controller.signal)
-  //   }
-  // })
   return (
 
-   
-    // <div>
-    //   <div>You clicked the button</div>
-    //   <button onClick={() => {setCounter((count)=> count+1)}}>Click Me</button>
-    //   <button onClick={() => {setSync((current) => !current)}}>Sync</button>
-    // </div>
-   
-    // <div>
-    //   <div>
-    //     <form onSubmit={(e) => {
-    //       e.preventDefault();
-    //       const newUser = {
-    //         id: counter,
-    //         username,
-    //         email
-    //       }
-    //       setCounter((currentCounter) => currentCounter+1)
-    //       setUsers((currentUsersState) => [...currentUsersState, newUser])
-    //     }}>
-    //       <div>
-    //         <label htmlFor='username'>Username</label>
-    //         <input name="username" id='username' value={username}
-    //           onChange={(e) => {setUsername(e.target.value)}}
-    //         >
-
-    //         </input>
-    //       </div>
-    //       <div>
-    //         <label htmlFor='email'>Email</label>
-    //         <input name="email" id='email' value={email}
-    //         onChange={(e) => {setEmail(e.target.value)}}
-    //       >
-
-    //       </input>
-    //       </div>
-    //       <button>Add User</button>
-    //     </form>
-        
-    //   </div>
-    //   <br/>
-    //   {users.map((user) => (
-    //     <UserDetails key={user.id} user={user} setUsers={setUsers}/>
-    //   ))}
-    //   {/* <RegisterForm/> */}
-    //   {/* {mockUsers.map((user) => {
-    //     return <UserDetails user={user} />
-    //   })} */}
-    //   {/* <UserProfile 
-    //   username='Shubham'
-    //   age={20} 
-    //   isLoggedIn={true} 
-    //   work={work}
-    //   favouriteFoods = {[
-    //     {
-    //       name: "Sushi",
-    //       id: "sushi"
-    //     },
-    //     {
-    //       name: "Aloo Tikki",
-    //       id:"Aloo Tikki"
-
-    //     }
-    //   ]}
-    //   /> */}
-    //   {/* <FirstQuestion/>
+    <div>
+      {/* //  <FirstQuestion/>
     //   <SecondQuestion/>
     //   <ThirdQuestion/>
     //   <FourthQuestion/>
     //   <FifthQuestion/>
     //   <SixthQuestion/>
     //   <SeventhQuestion/>
-    //   <EighthQuestion/> */}
-    // </div>
-    <div>
-      <Eventlistener/>
+    //   <EighthQuestion/>  */}
+         <Eventlistener/>
     </div>
   )
 }

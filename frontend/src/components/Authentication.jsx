@@ -1,5 +1,7 @@
 import React from 'react'
 
+  
+const Authentication = () => {
   const isAuthenticated = true
 
   const USER_STATUS = 'ZERO';
@@ -48,10 +50,6 @@ import React from 'react'
     </div>
     )
   }
-const Authentication = () => {
-  return (
-    <div>Authentication</div>
-  )
 }
 
 export default Authentication

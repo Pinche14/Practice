@@ -1,19 +1,19 @@
-import React , {useEffect} from 'react'
+import React , {useEffect, useState} from 'react'
+import LoginForm from './LoginForm'
 
 
 const Eventlistener = () => {
-  useEffect(() => {
-    const resizeEventHandler = (e) => [
-      console.log("window/ViewPort Reszied")
-    ]
-    window.addEventListener('resize' , resizeEventHandler )
-
-    return () => {
-      window.removeEventListener('resize' , resizeEventHandler)
-    }
-  }, [])
+  const [toggle, setToggle] = useState(false)
+  
   return (
-    <div>Eventlistener</div>
+    <div>
+      <button onClick={() => setToggle((currentState) => !currentState)}>
+      Toggle
+     </button>
+     {toggle &&  <LoginForm/>}
+    </div>
+  
+    //<div>Eventlistener</div>
   )
 }
 

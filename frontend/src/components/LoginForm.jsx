@@ -1,6 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const LoginForm = () => {
+    useEffect(() => {
+        const resizeEventHandler = (e) => [
+          console.log("window/ViewPort Reszied")
+        ]
+        window.addEventListener('resize' , resizeEventHandler )
+    
+        return () => {
+          console.log("Unmounting LoginForm")
+          console.log("removing Resize Event Listener")
+          window.removeEventListener('resize' , resizeEventHandler)
+        }
+      }, [])
+
+      
   return (
     <from 
         onSubmit={(e) => {
@@ -17,6 +31,7 @@ const LoginForm = () => {
         })
        // console.log(formData.get('username'));
     }}>
+        <br/>
         <label htmlFor="username">Username</label>
         <br/>
         <input id="username" 

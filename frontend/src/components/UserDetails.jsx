@@ -1,6 +1,26 @@
 import React ,{useState} from 'react'
 import PropTypes from 'prop-types';
 const UserDetails = ({user , setUsers}) => {
+  // const mockUsers = [
+  //   {
+  //     id: 1,
+  //     username: 'Shubham',
+  //     email: 'shubham70254@gmail.com'
+  //   },
+  //   {
+  //     id: 2,
+  //     username: "Vikas",
+  //     email: 'vikas123@gmail.com'
+  //   },
+    
+  // ]
+  // const work = () => {
+  //   console.log("Work")
+  // }
+
+  // window.addEventListener('resize', (e) => {
+  //   console.log(window.innerHeight,window.innerWidth)
+  // });
   const [isEditing, setIsEditing] = useState(false)
   const [username, setUsername] = useState(user.username)
   const [email, setEmail] = useState(user.email)
