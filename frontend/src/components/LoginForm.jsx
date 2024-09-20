@@ -1,18 +1,27 @@
 import React, {useEffect} from 'react'
+import useDocument from '../utlis/useDocument'
 
 const LoginForm = () => {
     useEffect(() => {
         const resizeEventHandler = (e) => [
           console.log("window/ViewPort Reszied")
         ]
+
+        // const handleDocumentClick = (e) => {
+        //   console.log("Clicked Document")
+        // }
         window.addEventListener('resize' , resizeEventHandler )
+        //document.addEventListener('click', handleDocumentClick)
     
         return () => {
           console.log("Unmounting LoginForm")
           console.log("removing Resize Event Listener")
           window.removeEventListener('resize' , resizeEventHandler)
-        }
+          //document.removeEventListener("click", handleDocumentClick)
+        };
       }, [])
+
+      useDocument()
 
       
   return (
