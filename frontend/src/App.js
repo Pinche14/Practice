@@ -15,7 +15,7 @@ import UserDetails from './components/UserDetails'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Eventlistener from './components/Eventlistener'
-
+import ContextAPI from './components/ContextAPI.jsx'
 
 const App = () => {
   
@@ -30,7 +30,9 @@ const App = () => {
     //   <SixthQuestion/>
     //   <SeventhQuestion/>
     //   <EighthQuestion/>  */}
-         <Eventlistener/>
+         {/* <Eventlistener/> */}
+         <ContextAPI/>
+         
     </div>
   )
 }
