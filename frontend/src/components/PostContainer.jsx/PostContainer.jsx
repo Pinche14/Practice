@@ -8,7 +8,7 @@ const PostContainer = () => {
     const userContextDat = useContext(UserCOntext);
   return (
     <div>
-        {/* <PostContent data={data}/> */}
+        <PostContent data={data}/> 
         <div>{userContextDat.displayName}</div>
     </div>
   )

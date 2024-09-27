@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserCOntext } from '../../utlis/contexts/UserCOntext'
 
-const PostContentButtons = ({data}) => {
+const PostContentButtons = () => {
+  const userCOntextData = useContext(UserCOntext)
+
   return (
-    <div>{data}</div>
+    
+    <div>
+      {userCOntextData.id}
+
+    </div>
   )
 }
 
