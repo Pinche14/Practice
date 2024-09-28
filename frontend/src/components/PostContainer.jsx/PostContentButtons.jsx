@@ -8,7 +8,6 @@ const PostContentButtons = () => {
     
     <div>
       {userCOntextData.id}
-
     </div>
   )
 }
