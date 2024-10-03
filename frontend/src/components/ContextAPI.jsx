@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PostContainer from './PostContainer.jsx/PostContainer'
 import { UserCOntext } from '../utlis/contexts/UserCOntext'
 const ContextAPI = () => {
+  const [userData, setUserData] = useState({
+    id:1,
+    username: "Shubham Pathak",
+    email: "shubham123@gmail.com",
+    displayName: "Charlatan"
+  })
   return (
-    <UserCOntext.Provider value={{
-      id:1,
-      username: 'Shubham',
-      email: 'shubham123@gmail.com',
-      displayName: 'Charlatan'
-    }}>
+    <UserCOntext.Provider value={{...userData, setUserData}}>
       <div>
         <PostContainer/>
       </div>
