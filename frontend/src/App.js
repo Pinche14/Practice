@@ -16,6 +16,7 @@ import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Eventlistener from './components/Eventlistener'
 import ContextAPI from './components/ContextAPI.jsx'
+import DataFetching from './components/DataFetching.jsx'
 
 const App = () => {
   
@@ -31,8 +32,8 @@ const App = () => {
     //   <SeventhQuestion/>
     //   <EighthQuestion/>  */}
          {/* <Eventlistener/> */}
-         <ContextAPI/>
-         
+         {/* <ContextAPI/> */}
+         <DataFetching/>
     </div>
   )
 }
