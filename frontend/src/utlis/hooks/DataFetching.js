@@ -16,19 +16,22 @@ const DataFetching = (userId) => {
     .then((data) => {
       //console.log(data)
       setUserData(data)
+      setError(undefined)
     })
     .catch((err) => {
       console.log(err)
       setError(err)
     }).finally(() =>{
-      setLoading(false)
+      setTimeout(() => {
+        setLoading(false)
+      }, 2000) 
     })
     return () => {
       controller.abort();
       setLoading(false)
     }
   }, [userId])
-  return userData 
+  return {user :userData, loading, error} 
 }
 
 export default DataFetching
