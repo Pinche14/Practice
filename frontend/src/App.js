@@ -9,7 +9,6 @@ import SeventhQuestion from './questions/seventh-question'
 import UserProfile from './components/UserProfile'
 import UserFavouriteFoods from './components/UserFavouriteFoods'
 import EighthQuestion from './questions/eighth-question'
-import "./globals.css";
 import "./components/UserDetails"
 import UserDetails from './components/UserDetails'
 import LoginForm from './components/LoginForm'
@@ -17,12 +16,30 @@ import RegisterForm from './components/RegisterForm'
 import Eventlistener from './components/Eventlistener'
 import ContextAPI from './components/ContextAPI.jsx'
 import DataFetching from './utlis/hooks/DataFetching.js'
+import { BrowserRouter, createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
+import { element } from 'prop-types'
+
+
 
 const App = () => {
-  
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element:<App/>,
+      children: [
+        {
+          path: "users",
+          element: <UserDetails/>
+        }
+      ]
+    },
+    
+  ])
+ 
   return (
 
     <div>
+      <RouterProvider router={router}/>
       {/* //  <FirstQuestion/>
     //   <SecondQuestion/>
     //   <ThirdQuestion/>
@@ -32,7 +49,7 @@ const App = () => {
     //   <SeventhQuestion/>
     //   <EighthQuestion/>  */}
          {/* <Eventlistener/> */}
-         <ContextAPI/> 
+          {/* <ContextAPI/>  */}
     </div>
   )
 }
