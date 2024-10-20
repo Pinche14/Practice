@@ -22,24 +22,11 @@ import { element } from 'prop-types'
 
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element:<App/>,
-      children: [
-        {
-          path: "users",
-          element: <UserDetails/>
-        }
-      ]
-    },
-    
-  ])
+  
  
   return (
 
     <div>
-      <RouterProvider router={router}/>
       {/* //  <FirstQuestion/>
     //   <SecondQuestion/>
     //   <ThirdQuestion/>

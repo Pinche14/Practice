@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import PostContainer from './PostContainer.jsx/PostContainer'
 import { UserCOntext } from '../utlis/contexts/UserCOntext'
 import DataFetching from '../utlis/hooks/DataFetching'
-
+import { Link, Outlet, useNavigate } from 'react-router-dom'
 const ContextAPI = () => {
   const {user, loading, error} = DataFetching(7)
   console.log(user,loading,error)
@@ -14,15 +14,36 @@ const ContextAPI = () => {
   //   displayName: "Charlatan"
   )
 
+  const navigate = useNavigate()
   useEffect(() => {
-    if(!loading && !error && user) setUserData(user);
-  }, [loading,error,user]);
+    if(!loading && !error && user) {
+      setUserData(user)
+      navigate('/users')
+    }
+  }, [loading,error,user,navigate]);
   return (
-    <UserCOntext.Provider value={{...userData, setUserData}}>
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+          <li>
+            <Link to="/blog-posts">BlogPosts</Link>
+          </li>
+        </ul>
+      </nav>
+      <UserCOntext.Provider value={{...userData, setUserData}}>
       <div>
         {loading ? 'loading...': <PostContainer/>}
       </div>
-    </UserCOntext.Provider>
+      </UserCOntext.Provider>
+      <Outlet/>
+    </>
+    
     // <div>
     //   <PostContainer/>
     // </div>
