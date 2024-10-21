@@ -36,6 +36,11 @@ const ContextAPI = () => {
           </li>
         </ul>
       </nav>
+
+      <div>
+        <label htmlFor="data">Enter Data</label>
+        <input type="text" id="data" onChange={()}/>
+      </div>
       <UserCOntext.Provider value={{...userData, setUserData}}>
       <div>
         {loading ? 'loading...': <PostContainer/>}
