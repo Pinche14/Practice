@@ -18,6 +18,7 @@ import ContextAPI from './components/ContextAPI.jsx'
 import DataFetching from './utlis/hooks/DataFetching.js'
 import { BrowserRouter, createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import { element } from 'prop-types'
+import NinthQuestion from './questions/ninth-question.jsx'
 
 
 
@@ -35,8 +36,9 @@ const App = () => {
     //   <SixthQuestion/>
     //   <SeventhQuestion/>
     //   <EighthQuestion/>  */}
+    <NinthQuestion/>
          {/* <Eventlistener/> */}
-          <ContextAPI/> 
+          {/* <ContextAPI/>  */}
     </div>
   )
 }
