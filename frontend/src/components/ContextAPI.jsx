@@ -39,7 +39,7 @@ const ContextAPI = () => {
 
       <div>
         <label htmlFor="data">Enter Data</label>
-        <input type="text" id="data" onChange={(e.atget.value)}/>
+        <input type="text" id="data" onChange= {(e) => (e.target.value)}/>
       </div>
       <UserCOntext.Provider value={{...userData, setUserData}}>
       <div>
