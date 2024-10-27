@@ -23,8 +23,7 @@ import NinthQuestion from './questions/ninth-question.jsx'
 
 
 const App = () => {
-  
- 
+
   return (
 
     <div>
@@ -36,9 +35,9 @@ const App = () => {
     //   <SixthQuestion/>
     //   <SeventhQuestion/>
     //   <EighthQuestion/>  */}
-    <NinthQuestion/>
-         {/* <Eventlistener/> */}
-          {/* <ContextAPI/>  */}
+    {/* <NinthQuestion/> */}
+         {/* <Eventlistener/>  */}
+          <ContextAPI/>  
     </div>
   )
 }

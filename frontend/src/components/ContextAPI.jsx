@@ -18,7 +18,7 @@ const ContextAPI = () => {
   useEffect(() => {
     if(!loading && !error && user) {
       setUserData(user)
-      navigate('/users')
+      //navigate('/users')
     }
   }, [loading,error,user,navigate]);
   return (
@@ -39,8 +39,17 @@ const ContextAPI = () => {
 
       <div>
         <label htmlFor="data">Enter Data</label>
-        <input type="text" id="data" onChange= {(e) => (e.target.value)}/>
+        <input 
+          type="text" 
+          id="data" 
+          onChange= {(e) => {
+            if (e.target.value.length > 10){
+              navigate("/blog-posts")
+            }
+          }}
+        />
       </div>
+
       <UserCOntext.Provider value={{...userData, setUserData}}>
       <div>
         {loading ? 'loading...': <PostContainer/>}
