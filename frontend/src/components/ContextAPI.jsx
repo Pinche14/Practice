@@ -44,7 +44,13 @@ const ContextAPI = () => {
           id="data" 
           onChange= {(e) => {
             if (e.target.value.length > 10){
-              navigate("/blog-posts")
+              navigate("/blog-posts", {state: {
+                posts: [{
+                  id:1,
+                  title:"Hello World",
+                  content: "Welcome to my first post"
+                }]
+              }})
             }
           }}
         />
