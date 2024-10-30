@@ -5,11 +5,14 @@ const BlogPostPage = () => {
   const [posts, setPosts] = useState([])
   const {state} = useLocation()
 
+  console.log(window.history.state)
+
   useEffect(() => {
+    console.log(state)
     if(state && state.posts){
       setPosts(state.posts)
     }
-  })
+  },[state])
   
   //console.log(routerLocation)
   return (
