@@ -20,7 +20,7 @@ const BlogPostPage = () => {
       <h1>BlogPostPage</h1>
       {posts.map((post) => (
         <div key={post.id}>
-          <h2>{post.title}</h2>
+          <h2>{post.title}</h2> 
           <section>
             <p>{post.content}</p>
           </section>
