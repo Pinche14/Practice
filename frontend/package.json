@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "@vitejs/plugin-react": "^4.3.3",
     "prop-types": "^15.8.1",
@@ -38,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "github:testing-library/jest-dom",
     "@testing-library/react": "^16.0.1",
     "jsdom": "^25.0.1",
     "vitest": "^2.1.4"
