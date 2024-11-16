@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "@vitejs/plugin-react": "^4.3.3",
@@ -15,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "vitest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,6 +41,6 @@
     "@testing-library/jest-dom": "github:testing-library/jest-dom",
     "@testing-library/react": "^16.0.1",
     "jsdom": "^25.0.1",
-    "vitest": "^2.1.4"
+    "vitest": "^2.1.5"
   }
 }
