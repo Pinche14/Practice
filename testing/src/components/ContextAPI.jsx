@@ -3,18 +3,29 @@ import PostContainer from './PostContainer.jsx/PostContainer'
 import { UserCOntext } from '../utlis/contexts/UserCOntext'
 import DataFetching from '../utlis/hooks/DataFetching'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
+import UserDetails from './UserDetails'
 const ContextAPI = () => {
   const {user, loading, error} = DataFetching(7)
   console.log(user,loading,error)
 
   const [userData, setUserData] = useState(
-  //   id:1,
-  //   username: "Shubham Pathak",
-  //   email: "shubham123@gmail.com",
-  //   displayName: "Charlatan"
+    
+      // id:1,
+      // username: "Shubham Pathak",
+      // email: "shubham123@gmail.com",
+      // displayName: "Charlatan"
+    
   )
-
   const navigate = useNavigate()
+  const [users, setUsers] = useState([
+    {
+      id:1,
+      username: "Shubham",
+      email:"shubham123@gmail.com"
+    }
+  ])
+
+  
   useEffect(() => {
     if(!loading && !error && user) {
       setUserData(user)
@@ -23,7 +34,10 @@ const ContextAPI = () => {
   }, [loading,error,user,navigate]);
   return (
     <>
-      <nav>
+      {users.map(user =>(
+        <UserDetails key={user.id} user={user} setUsers={setUsers}/>
+      ))}
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -60,7 +74,7 @@ const ContextAPI = () => {
       <div>
         {loading ? 'loading...': <PostContainer/>}
       </div>
-      </UserCOntext.Provider>
+      </UserCOntext.Provider> */}
       <Outlet/>
     </>
     

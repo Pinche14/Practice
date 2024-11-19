@@ -1,9 +1,17 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 
 const UsernameDisplay = ({username}) => {
+
+  const [timerPassed, setTimerPassed] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimerPassed(true)
+    },5000);
+  }, []);
   return (
     <div>
-        <span>{username}</span>
+        <span>{timerPassed && username}</span>
     </div>
   )
 }
