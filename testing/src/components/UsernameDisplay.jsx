@@ -9,6 +9,7 @@ const UsernameDisplay = ({username}) => {
       setTimerPassed(true)
     },5000);
   }, []);
+  
   return (
     <div>
         <span>{timerPassed && username}</span>

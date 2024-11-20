@@ -5,8 +5,8 @@ import DataFetching from '../utlis/hooks/DataFetching'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import UserDetails from './UserDetails'
 const ContextAPI = () => {
-  const {user, loading, error} = DataFetching(7)
-  console.log(user,loading,error)
+  //const {user, loading, error} = DataFetching(7)
+  //console.log(user,loading,error)
 
   const [userData, setUserData] = useState(
     
@@ -16,7 +16,7 @@ const ContextAPI = () => {
       // displayName: "Charlatan"
     
   )
-  const navigate = useNavigate()
+  //const navigate = useNavigate()
   const [users, setUsers] = useState([
     {
       id:1,
@@ -26,12 +26,12 @@ const ContextAPI = () => {
   ])
 
   
-  useEffect(() => {
-    if(!loading && !error && user) {
-      setUserData(user)
-      //navigate('/users')
-    }
-  }, [loading,error,user,navigate]);
+  // useEffect(() => {
+  //   if(!loading && !error && user) {
+  //     setUserData(user)
+  //     //navigate('/users')
+  //   }
+  // }, [loading,error,user]);
   return (
     <>
       {users.map(user =>(
