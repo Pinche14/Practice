@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContextAPI > Edit button > should render users 1`] = `
+<div>
+  <div>
+    <div>
+      <button>
+        Edit
+      </button>
+      <button>
+        Delete
+      </button>
+    </div>
+    <div>
+      <b>
+        ID:
+        1
+         
+      </b>
+      <br />
+      <b>
+        Username: 
+      </b>
+      <span>
+        Shubham
+      </span>
+      <br />
+      <b>
+        Email: 
+      </b>
+      <span>
+        shubham123@gmail.com
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ContextAPI > should render users 1`] = `
+<div>
+  <div>
+    <div>
+      <button>
+        Edit
+      </button>
+      <button>
+        Delete
+      </button>
+    </div>
+    <div>
+      <b>
+        ID:
+        1
+         
+      </b>
+      <br />
+      <b>
+        Username: 
+      </b>
+      <span>
+        Shubham
+      </span>
+      <br />
+      <b>
+        Email: 
+      </b>
+      <span>
+        shubham123@gmail.com
+      </span>
+    </div>
+  </div>
+</div>
+`;
