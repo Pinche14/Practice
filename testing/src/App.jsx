@@ -19,6 +19,7 @@ import DataFetching from './utlis/hooks/DataFetching.js'
 import { BrowserRouter, createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import { element } from 'prop-types'
 import NinthQuestion from './questions/ninth-question.jsx'
+import PostReq from './components/PostReq.jsx'
 
 
 
@@ -37,7 +38,8 @@ const App = () => {
     //   <EighthQuestion/>  */}
     {/* <NinthQuestion/> */}
          {/* <Eventlistener/>  */}
-          <ContextAPI/>  
+          {/* <ContextAPI/>   */}
+          <PostReq/>
     </div>
   )
 }

@@ -1,41 +1,110 @@
-import React , {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
 const Main = () => {
+  // const API_URL = "https://jsonplaceholder.typicode.com/photos";
 
-  const API_URL = "https://jsonplaceholder.typicode.com/photos"
+  // const [photos, setPhotos] = useState([]);
+  // const [search, setSearch] = useState(""); // State for search input
+  // const [filteredPhotos, setFilteredPhotos] = useState([]); // State for filtered photos
 
-  //const [videos, setVideos] = useState([])
+  // // Function to fetch photos
+  // const getPhotos = async () => {
+  //   try {
+  //     const response = await fetch(API_URL);
+  //     if (!response.ok) {
+  //       throw new Error(`Response status: ${response.status}`);
+  //     }
+  //     const json = await response.json();
+  //     setPhotos(json.slice(0, 6)); 
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // };
 
- async function getVideos() {
-  const url = "https://jsonplaceholder.typicode.com/photos"
-  try{
-    const response = await fetch(url)
-    if(!response.ok){
-      throw new Error(`Response status: ${response.status}`)
+  // // Fetch photos on component mount
+  // useEffect(() => {
+  //   getPhotos();
+  // }, []);
+
+  // // Filter photos based on search input
+  // useEffect(() => {
+  //   setFilteredPhotos(
+  //     photos.filter((photo) =>
+  //       photo.title.toLowerCase().includes(search.toLowerCase())
+  //     )
+  //   );
+  // }, [search, photos]);
+
+  // return (
+  //   <div
+  //     className="main-photo"
+  //     style={{ backgroundColor: "beige", height: "700px", padding: "20px",  }}
+  //   >
+  //     <label htmlFor="title">Search Photo by Title:</label>
+  //     <input
+  //       type="text"
+  //       id="title"
+  //       value={search}
+  //       onChange={(e) => setSearch(e.target.value)}
+  //       placeholder="Type photo title..."
+  //       style={{ marginLeft: "10px", padding: "5px", }}
+  //     />
+  //     <div style={{ marginTop: "20px",display:'flex' }}>
+  //       {filteredPhotos.map((photo) => (
+  //         <div key={photo.id} style={{ marginBottom: "10px" }}>
+  //           <img
+  //             src={photo.thumbnailUrl}
+  //             alt={photo.title}
+  //             style={{ width: "100px", height: "100px", marginRight: "10px" }}
+  //           />
+  //           <span>{photo.title}</span>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </div>
+  //);
+
+  const API_URL = "https://api.sampleapis.com/movies/animation"
+
+  const [videos, setVideos] = useState([])
+
+  const getVideos = async (url) => {
+    try {
+      const res = await fetch(API_URL)
+      const json = await res.json()
+      setVideos(json.slice(0,3))
+    } catch (error) {
+      console.error(error)
+      
     }
-    const json = await response.json()
-    console.log(json)
-  }catch(error){
-    console.log(error.message)
   }
- }
- 
   
+  useEffect(() => {
+    getVideos(API_URL)
+  },[])
+
   return (
-    <div className='main-video'style={{backgroundColor:'beige',height:'700px'}}>
-      {/* {videos.length === 0 ? (
-        <p>Loading Video...</p>
-      ): (
-        videos.map((video,index) => (
-          <video key={index}>
-            <source src={video} type="video/mp4"/>
-          </video>
-        ))
-      )} */}
+    <div className="main">
+      {videos.map((video) => (
+        <div className="photos">
+          <video 
+              src={video.videoURL} 
+              controls
+              style={{ width: "100%", maxWidth: "500px" }}
+          />
+          <span>{video.title}</span>
+        </div>
+      ))}
     </div>
   )
+
+  
 }
 
-export default Main
+export default Main;
+
 
 //video
+
+
+
