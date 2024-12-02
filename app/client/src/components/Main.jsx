@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
+
+  
   // const API_URL = "https://jsonplaceholder.typicode.com/photos";
 
   // const [photos, setPhotos] = useState([]);
@@ -64,41 +67,20 @@ const Main = () => {
   //   </div>
   //);
 
-  const API_URL = "https://api.sampleapis.com/movies/animation"
-
-  const [videos, setVideos] = useState([])
-
-  const getVideos = async (url) => {
-    try {
-      const res = await fetch(API_URL)
-      const json = await res.json()
-      setVideos(json.slice(0,3))
-    } catch (error) {
-      console.error(error)
-      
-    }
-  }
   
-  useEffect(() => {
-    getVideos(API_URL)
-  },[])
 
   return (
-    <div className="main">
-      {videos.map((video) => (
-        <div className="photos">
-          <video 
-              src={video.videoURL} 
-              controls
-              style={{ width: "100%", maxWidth: "500px" }}
-          />
-          <span>{video.title}</span>
-        </div>
-      ))}
+    
+    <div  className="main"style={{background:'beige',height:'700px'}}>
+     <nav>
+        <Link to="/" style={{ margin: '10px' }}>Home</Link>
+        <Link to="/video" style={{ margin: '10px' }}>Videos</Link>
+        <Link to="/photos" style={{ margin: '10px' }}>Photos</Link>
+      </nav>
     </div>
+    
+    
   )
-
-  
 }
 
 export default Main;
