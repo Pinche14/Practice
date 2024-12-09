@@ -20,7 +20,7 @@ import { BrowserRouter, createBrowserRouter, Outlet, RouterProvider } from 'reac
 import { element } from 'prop-types'
 import NinthQuestion from './questions/ninth-question.jsx'
 import PostReq from './components/PostReq.jsx'
-
+import New from "./components/New.jsx"
 
 
 const App = () => {
@@ -39,7 +39,8 @@ const App = () => {
     {/* <NinthQuestion/> */}
          {/* <Eventlistener/>  */}
           {/* <ContextAPI/>   */}
-          <PostReq/>
+          {/* <PostReq/> */}
+          <New/>
     </div>
   )
 }
