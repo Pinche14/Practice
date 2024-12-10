@@ -8,32 +8,36 @@ import Main from './components/Main'
 import Video from './pages/Video'
 import Home from './pages/Home'
 import Photos from './pages/Photos'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element:<App/>,
-    children: [
-      {
-        path: '/',
-        element: <Home/>
-      },
-      {
-        path: 'video',
-        element: <Video/>
-      },
-      {
-        path: 'photos',
-        element: <Photos/>
-      }
-    ]
-  }
-])
+// const router = createBrowserRouter([
+  // {
+  //   path: '/',
+  //   element:<App/>,
+  //   children: [
+  //     {
+  //       path: '/',
+  //       element: <Home/>
+  //     },
+  //     {
+  //       path: 'video',
+  //       element: <Video/>
+  //     },
+  //     {
+  //       path: 'photos',
+  //       element: <Photos/>
+  //     }
+  //   ]
+  // }
+// ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    {/* <RouterProvider router={router}/> */}
+    <Header/>
+    <App/>
+    <Footer/>
   </StrictMode>,
 )

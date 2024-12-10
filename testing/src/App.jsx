@@ -39,8 +39,8 @@ const App = () => {
     {/* <NinthQuestion/> */}
          {/* <Eventlistener/>  */}
           {/* <ContextAPI/>   */}
-          {/* <PostReq/> */}
-          <New/>
+          <PostReq/> 
+          
     </div>
   )
 }
