@@ -35,9 +35,6 @@ import Footer from './components/Footer'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <RouterProvider router={router}/> */}
-    <Header/>
-    <App/>
-    <Footer/>
+    
   </StrictMode>,
 )
