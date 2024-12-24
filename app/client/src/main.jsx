@@ -12,28 +12,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element:<App/>,
-    children: [
-      {
-        path: '/',
-        element: <Home/>
-      },
-      {
-        path: 'video',
-        element: <Video/>
-      },
-      {
-        path: 'photos',
-        element: <Photos/>
-      }
-    ]
-  }
-])
-
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App/>
   </StrictMode>,
