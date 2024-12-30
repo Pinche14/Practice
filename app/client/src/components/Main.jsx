@@ -72,11 +72,12 @@ const Main = () => {
   return (
     
     <div  className="main"style={{background:'beige',height:'700px'}}>
-     <nav>
-        <Link to="/" style={{ margin: '10px' }}>Home</Link>
-        <Link to="/video" style={{ margin: '10px' }}>Videos</Link>
-        <Link to="/photos" style={{ margin: '10px' }}>Photos</Link>
-      </nav>
+      <div style={{backgroundColor:'yellow', display:'flex', }}>
+        <h3>Audio</h3>
+        <h3>Blog</h3>
+        <h3>Video</h3>
+      </div>
+ 
     </div>
     
     
