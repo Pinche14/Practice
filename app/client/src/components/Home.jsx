@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
-const Main = () => {
+
+const Home = () => {
 
   
   // const API_URL = "https://jsonplaceholder.typicode.com/photos";
@@ -72,10 +72,11 @@ const Main = () => {
   return (
     
     <div  className="main"style={{background:'beige',height:'700px'}}>
-      <div style={{backgroundColor:'yellow', display:'flex', }}>
+      <div style={{backgroundColor:'yellow', display:'flex', gap:'30px'}}>
         <h3>Audio</h3>
         <h3>Blog</h3>
         <h3>Video</h3>
+        <h3></h3>
       </div>
  
     </div>
@@ -84,7 +85,7 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default Home;
 
 
 //video
