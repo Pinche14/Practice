@@ -3,10 +3,10 @@ import React from 'react'
 const Navbar = () => {
   return (
    
-    <nav>
+    <nav className='navigation'>
+      <div className=''></div>
       <div></div>
-      <div></div>
-      <div></div>
+      <div> </div>
     </nav>
     
   )

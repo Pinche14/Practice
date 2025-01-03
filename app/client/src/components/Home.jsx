@@ -76,10 +76,9 @@ const Home = () => {
         <h3>Audio</h3>
         <h3>Blog</h3>
         <h3>Video</h3>
+        <h3>Photos</h3>
       </div>
-    </div>
-    
-    
+    </div> 
   )
 }
 

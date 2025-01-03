@@ -2,9 +2,23 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div style={{backgroundColor:'lightcyan', width:' 5 rem'}}>
-      <div >
+    <div className='header' style={{display: 'flex', gap: '2rem'}}>
+      <div className='logo'>Logo</div>
+
+      <div className='search-bar'>
        <input type="text" />
+      </div>
+
+      <div className='create'>
+        Uplaod
+      </div>
+
+      <div className='notification'>
+        Notification
+      </div>
+
+      <div className='profile'>
+        Profile
       </div>
     </div>
     

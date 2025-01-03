@@ -3,20 +3,34 @@ import './styles/App.css'
 import Header from './components/Header'
 import Home from './components/Home'
 import Footer from './components/Footer'
-import { BrowserRouter as Route,Router,Routes } from 'react-router-dom'
+import Photos from './pages/Photos'
+import Video from './pages/Video'
+import Audio from './pages/Audio'
+import Blog from './pages/Blog'
+import { Route,Router,Routes } from 'react-router-dom'
 
 
 function App() {
 
   return (
-   
-    
-    <>
-    
-    <Header/>
-    <Home/>
-    <Footer/> 
-    </>
+    // <> 
+    // <Header/>
+    // <Routes>
+    //   <Route path='/' element = {<Home/>}/>
+    // </Routes>
+    // <Footer/> 
+    // </>
+
+    <div>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path='/video/:categoryId/:videoId' element={<Video/>}/>
+        <Route path='/photos/:categoryId/:audioId' element={<Audio/>}/>
+        <Route path='/photos/:categoryId/:audioId' element={<Photos/>}/>
+        <Route path='/photos/:categoryId/:audioId' element={<Blog/>}/>
+      </Routes>
+    </div>
    
     
   )
