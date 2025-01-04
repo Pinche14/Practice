@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar"
+import Feed from "../pages/Feed";
+const Home = ({navbar}) => {
 
-
-const Home = () => {
-
+  return (
+    <>
+       <Navbar navbar={navbar}/>
+       <div className="feed">
+        <Feed/>
+       </div>
+    </>
+   
+  )
   
   // const API_URL = "https://jsonplaceholder.typicode.com/photos";
 
@@ -68,18 +77,6 @@ const Home = () => {
   //);
 
   
-
-  return (
-    
-    <div  className="main"style={{background:'beige',height:'700px'}}>
-      <div style={{backgroundColor:'yellow', display:'flex', gap:'30px'}}>
-        <h3>Audio</h3>
-        <h3>Blog</h3>
-        <h3>Video</h3>
-        <h3>Photos</h3>
-      </div>
-    </div> 
-  )
 }
 
 export default Home;

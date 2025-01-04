@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/App.css'
 import Header from './components/Header'
 import Home from './components/Home'
@@ -12,17 +12,11 @@ import { Route,Router,Routes } from 'react-router-dom'
 
 function App() {
 
+  const [navbar, setNavbar] = useState(true)
   return (
-    // <> 
-    // <Header/>
-    // <Routes>
-    //   <Route path='/' element = {<Home/>}/>
-    // </Routes>
-    // <Footer/> 
-    // </>
-
+    
     <div>
-      <Header/>
+      <Header setNavbar={setNavbar}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/video/:categoryId/:videoId' element={<Video/>}/>
