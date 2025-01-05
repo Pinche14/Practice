@@ -21,8 +21,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path='/video/:categoryId/:videoId' element={<Video/>}/>
         <Route path='/photos/:categoryId/:audioId' element={<Audio/>}/>
-        <Route path='/photos/:categoryId/:audioId' element={<Photos/>}/>
-        <Route path='/photos/:categoryId/:audioId' element={<Blog/>}/>
+        <Route path='/photos/:categoryId/:photoId' element={<Photos/>}/>
+        <Route path='/photos/:categoryId/:blogId' element={<Blog/>}/>
       </Routes>
     </div>
    

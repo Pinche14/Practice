@@ -5,13 +5,13 @@ const Navbar = ({navbar}) => {
    
     <nav className='navigation-bar'  style={{backgroundColor:'yellow', display:'flex', gap:'30px'}}>
       <div className='navigation-audio'>
-        <p>Audio</p>
+        <p>Video</p>
       </div>
       <div className='navigation-blog'>
         <p>Blog</p>
       </div>
       <div className='navigation-video'>
-        <p>Video</p>
+        <p>Audio</p>
       </div>
       <div className='navigation-photos'>
         <p>Photos</p>
