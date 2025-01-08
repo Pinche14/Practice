@@ -4,11 +4,12 @@ import Feed from "../pages/Feed";
 
 const Home = ({navbar}) => {
 
+  const [type, setType] = useState(0);
   return (
     <>
-       <Navbar navbar={navbar}/>
+       <Navbar navbar={navbar} type={type} setType={setType}/>
        <div className="feed">
-        <Feed/>
+        <Feed type={type}/>
        </div>
     </>
    

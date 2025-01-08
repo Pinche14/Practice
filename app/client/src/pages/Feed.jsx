@@ -10,7 +10,7 @@ const Feed = () => {
         <h3>HistoryBuff</h3>
         <p>15k views &bull; 2 days ago</p>
       </Link>
-      <div className='card'>
+      {/* <div className='card'>
         <img src='' alt="" />
         <h2>Best Channel to learn history</h2>
         <h3>HistoryBuff</h3>
@@ -39,7 +39,7 @@ const Feed = () => {
           <h2>Best Channel to learn history</h2>
           <h3>HistoryBuff</h3>
           <p>15k views &bull; 2 days ago</p>
-      </div>
+      </div> */}
     </div>
     
 

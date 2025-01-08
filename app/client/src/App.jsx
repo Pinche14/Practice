@@ -24,6 +24,7 @@ function App() {
         <Route path='/photos/:categoryId/:photoId' element={<Photos/>}/>
         <Route path='/photos/:categoryId/:blogId' element={<Blog/>}/>
       </Routes>
+      <Footer/>
     </div>
    
     
