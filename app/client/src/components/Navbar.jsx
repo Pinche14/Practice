@@ -4,8 +4,8 @@ const Navbar = ({navbar,type,setType}) => {
   return (
    
     <nav className='navigation-bar'  style={{backgroundColor:'yellow', display:'flex', gap:'30px'}}>
-      <div className='navigation-audio' onClick={() => setType("Ks-_Mh1QhMc")} >
-        <p style={{textDecoration: 'underline'}}>Video</p>
+      <div className='navigation-audio'  >
+        <p style={{textDecoration: 'underline'}} onClick={() => setType("Ks-_Mh1QhMc")}>Video</p>
       </div>
       <div className='navigation-blog' onClick={() => setType(0)}>
         <p>Blog</p>
