@@ -8,13 +8,13 @@ const Navbar = ({navbar,type,setType}) => {
         <p style={{textDecoration: 'underline'}} onClick={() => setType("Ks-_Mh1QhMc")}>Video</p>
       </div>
       <div className='navigation-blog' onClick={() => setType(0)}>
-        <p>Blog</p>
+        <p style={{textDecoration: 'underline'}}>Blog</p>
       </div>
       <div className='navigation-video' onClick={() => setType(0)}>
-        <p>Audio</p>
+        <p style={{textDecoration: 'underline'}}>Audio</p>
       </div>
       <div className='navigation-photos' onClick={() => setType(0)}>
-        <p>Photos</p>
+        <p style={{textDecoration: 'underline'}}>Photos</p>
       </div>
     </nav>
     
